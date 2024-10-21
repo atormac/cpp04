@@ -10,6 +10,8 @@ class Animal
 	public:
 		Animal();
 		~Animal();
+		Animal(std::string type);
+		Animal &operator=(const Animal &a);
 };
 
 #endif

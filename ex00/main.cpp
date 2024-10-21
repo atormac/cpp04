@@ -1,9 +1,10 @@
 #include "Animal.hpp"
+#include "Cat.hpp"
 #include <iostream>
 
 int main(void)
 {
 	std::cout << "polymorphism" << std::endl;
-	Animal a;
+	Cat cat1;
 	return 0;
 }

@@ -2,7 +2,7 @@ NAME = polymorphism
 CXX = c++
 CXXFLAGS := -Wall -Wextra -Werror
 
-SOURCES := main.cpp Animal.cpp
+SOURCES := main.cpp Animal.cpp Cat.cpp
 OBJECTS := $(SOURCES:.cpp=.o)
 
 target asan: CXXFLAGS += -fsanitize=address,undefined -g
