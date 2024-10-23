@@ -4,11 +4,15 @@
 #include "Animal.hpp"
 #include <iostream>
 
-class Cat : Animal
+class Cat : public Animal
 {
 	public:
 		Cat();
-		~Cat();
+		virtual ~Cat();
+		Cat(const Cat &d);
+		Cat &operator=(const Cat &d);
+		void makeSound(void) const;
+		std::string getType(void) const;
 };
 
 #endif
