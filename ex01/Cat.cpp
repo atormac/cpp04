@@ -17,19 +17,17 @@ Cat::Cat(const Cat &d) : Animal(d)
 {
 	std::cout << "Cat copy constructor called" << std::endl;
 
-	this->brain = new Brain();
-	for (int i = 0; i < 100; i++)
-	{
-		this->brain->getIdeas()[i] = d.brain->getIdeas()[i];
-	}
+	this->brain = new Brain(*d.brain);
 }
 
 Cat &Cat::operator=(const Cat &d)
 {
-	std::cout << "Cat copy assingment overload called" << std::endl;
+	std::cout << "Cat copy assignment called" << std::endl;
 	if (this == &d)
 		return *this;
 	this->_type = d._type;
+	delete this->brain;
+	this->brain = new Brain(*d.brain);
 	return *this;
 }
 
